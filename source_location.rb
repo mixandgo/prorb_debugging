@@ -22,9 +22,11 @@ class User
 
     def persist(hash)
       # debugging the call stack
-      puts "-----------------"
+      puts "-----------------1"
       puts method(:serialize_then_persist).source_location
     end
-end
-
-User.new("John", "jdoe@email.com", 25).save
+  end
+  
+  User.new("John", "jdoe@email.com", 25).save
+  puts "-----------------2"
+  puts User.instance_method(:persist).source_location

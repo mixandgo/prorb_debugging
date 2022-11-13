@@ -7,3 +7,5 @@ source "https://rubygems.org"
 gem "rspec", "~> 3.12"
 
 gem "pry", "~> 0.14.1"
+
+gem "debug", "~> 1.6"

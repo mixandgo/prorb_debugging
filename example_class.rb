@@ -1,8 +1,7 @@
-require 'pry'
+require 'debug'
 
 class User
   def initialize(fname:, lname:, email:)
-    binding.pry
     @fname = fname
     @lname = lname
     @email = email
@@ -13,8 +12,9 @@ class User
   end
 
   def email
+    binding.b
     full_name + "<#{@email}>"
   end
 end
 
-User.new(fname: "John", lname: "Doe", email: "jdoe@email.com")
+User.new(fname: "John", lname: "Doe", email: "jdoe@email.com").email
